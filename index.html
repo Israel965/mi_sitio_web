@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Sitio Web Estructurado</title>
+<!-- Vinculación de CSS con ruta relativa -->
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+<h1>Proyecto Integrador Web</h1>
+<nav>
+<ul>
+<li><a href="index.html">Inicio</a></li>
+<li><a href="proyectos.html">Proyectos</a></li>
+<li><a href="contactos.html">Contacto</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<section>
+<h2>Publicación y Despliegue</h2>
+<p>Este sitio está optimizado para su transferencia vía FTP o GitHub Pages.</p>
+<!-- Vinculación de Imagen con ruta relativa -->
+<img src="img/images.png" alt="Captura del proyecto de desarrollo">
+<p id="mensaje-alerta" aria-live="polite" hidden></p>
+</section>
+</main>
+<div class="container">
+        <h1>Tabla Comparativa de Hosting</h1>
+        
+        <!-- Contenedor para hacer la tabla responsiva -->
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Criterio</th>
+                        <th>Hosting Gratuito (ej. GitHub Pages)</th>
+                        <th>Hosting de Pago (Shared / VPS)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Costo</td>
+                        <td>$0 USD</td>
+                        <td>Mensual / Anual ($3 - $15 USD/mes)</td>
+                    </tr>
+                    <tr>
+                        <td>Dominio</td>
+                        <td>Subdominio (usuario.github.io)</td>
+                        <td>Dominio propio (midominio.com)</td>
+                    </tr>
+                    <tr>
+                        <td>Base de Datos</td>
+                        <td>No soportado (Solo sitios estáticos)</td>
+                        <td>Soportado (MySQL, PostgreSQL, PHP)</td>
+                    </tr>
+                    <tr>
+                        <td>Seguridad / Transferencia</td>
+                        <td>Automática vía Git / HTTPS</td>
+                        <td>Conexión manual por FTP / SFTP / SSH</td>
+                    </tr>
+                    <tr>
+                        <td>Uso Recomendado</td>
+                        <td>Portafolios, tareas y pruebas</td>
+                        <td>Sitios de clientes, tiendas online</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+<footer>
+<p>&copy; 2026 Mi Sitio Web Estructurado. Todos los derechos reservados.</p>
+</footer>
+<!-- Vinculación de JavaScript con ruta relativa -->
+<script src="js/script.js"></script>
+</body>
+</html>

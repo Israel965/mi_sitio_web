@@ -1,0 +1,362 @@
+/* 1. RESET Y CONFIGURACIÓN BASE
+========================================================================== */
+:root {
+    --bg: #f3f5f8;
+    --bg-soft: #eef2f7;
+    --panel: #ffffff;
+    --panel-alt: #f8fafc;
+    --primary: #100218;
+    --primary-soft: #2e123c;
+    --accent: #7a1b5c;
+    --accent-2: #3498db;
+    --text: #1f2937;
+    --muted: #5f6f82;
+    --border: #e5e7eb;
+    --shadow: rgba(15, 23, 42, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+/* 2. ENCABEZADO Y NAVEGACIÓN
+========================================================================== */
+header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-soft) 100%);
+    color: #ffffff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(16, 2, 24, 0.18);
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+nav a {
+    color: #ffffff;
+    font-weight: 600;
+    transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+nav a:hover {
+    color: #d7b4dc;
+}
+
+/* 3. CONTENIDO GENERAL
+========================================================================== */
+main {
+    flex: 1;
+    width: min(1100px, calc(100% - 2rem));
+    margin: 2rem auto;
+}
+
+section {
+    background-color: var(--panel);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px var(--shadow);
+    border: 1px solid var(--border);
+}
+
+section h2 {
+    color: var(--text);
+    margin-bottom: 1rem;
+    font-size: clamp(1.8rem, 2vw, 2.3rem);
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 0.6rem;
+}
+
+section p {
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+.container {
+    max-width: 1100px;
+    width: min(1100px, calc(100% - 2rem));
+    margin: 2rem auto;
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+    font-size: clamp(2rem, 3vw, 2.5rem);
+}
+
+.category-title {
+    width: min(1100px, calc(100% - 2rem));
+    margin: 2rem auto 1rem;
+    text-align: center;
+    color: var(--text);
+    font-size: clamp(1.9rem, 3vw, 2.4rem);
+    font-weight: 700;
+}
+
+/* 4. TABLA COMPARATIVA
+========================================================================== */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    box-shadow: 0 12px 25px var(--shadow);
+    border-radius: 16px;
+    background-color: var(--panel);
+    border: 1px solid var(--border);
+}
+
+.table-responsive table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 680px;
+    text-align: left;
+}
+
+.table-responsive thead tr {
+    background: linear-gradient(135deg, #5b9bd5 0%, #3b82c4 100%);
+    color: #ffffff;
+}
+
+.table-responsive th,
+.table-responsive td {
+    padding: 16px 18px;
+    border: 1px solid #dfe6ef;
+    font-size: 0.98rem;
+    line-height: 1.5;
+}
+
+.table-responsive th {
+    font-weight: 700;
+}
+
+.table-responsive tbody td:first-child {
+    background-color: #eaf1fb;
+    font-weight: 700;
+    color: var(--text);
+    width: 22%;
+}
+
+.table-responsive tbody td {
+    background-color: #ffffff;
+    color: var(--text);
+}
+
+.table-responsive tbody tr:hover td {
+    background-color: #f4f8ff;
+}
+
+.table-responsive tbody tr:hover td:first-child {
+    background-color: #ddeafc;
+}
+
+/* 5. TARJETAS DE PROYECTOS
+========================================================================== */
+.cards-container {
+    width: min(1100px, calc(100% - 2rem));
+    margin: 2rem auto 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 1rem;
+    text-align: left;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(122, 27, 92, 0.12);
+    border-color: rgba(122, 27, 92, 0.3);
+}
+
+.card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    background-color: #edf2f7;
+}
+
+.card h4 {
+    color: var(--primary);
+    font-size: 1.15rem;
+    margin-bottom: 0.6rem;
+}
+
+.card p {
+    font-size: 0.92rem;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+/* 6. FORMULARIO DE CONTACTO
+========================================================================== */
+.form-container {
+    width: min(520px, calc(100% - 2rem));
+    margin: 2rem auto;
+    padding: 2rem 1.5rem;
+    background-color: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 12px 30px var(--shadow);
+}
+
+.form-container h2 {
+    margin-bottom: 1.5rem;
+    color: var(--text);
+    font-size: clamp(1.8rem, 2vw, 2.2rem);
+    text-align: center;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 0.75rem;
+}
+
+.form-container form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid #d8e0ea;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: var(--text);
+    background-color: #ffffff;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+    border-color: var(--accent-2);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.12);
+    outline: none;
+}
+
+.form-container textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    background: linear-gradient(135deg, var(--accent) 0%, #9b2d6a 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.form-container button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 22px rgba(122, 27, 92, 0.18);
+}
+
+/* 7. PIE DE PÁGINA
+========================================================================== */
+footer {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-soft) 100%);
+    color: #f7f1f1;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 0.95rem;
+}
+
+/* 8. DISEÑO RESPONSIVO (MÓVILES)
+========================================================================== */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+        padding: 1.2rem 1rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem 1rem;
+    }
+
+    main,
+    .container,
+    .cards-container,
+    .category-title {
+        width: min(100%, calc(100% - 1rem));
+    }
+
+    section {
+        padding: 1.4rem 1rem;
+    }
+
+    .form-container {
+        margin: 1rem auto;
+        padding: 1.5rem 1rem;
+    }
+}
